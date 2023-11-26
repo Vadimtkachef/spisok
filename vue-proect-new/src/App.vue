@@ -7,13 +7,13 @@
         list: [],
       }
     },
-    methods:{
+   /* methods:{
       sayHello(){
         this.list.push(this.name);
         alert(this.list[this.list.length-1]);
         console.log(this.list);
       }
-    }
+    }*/
 
   }
 
@@ -22,8 +22,8 @@
 <template>
   <p class="spis">СПИСОК ДЕЛ</p>
   <h1 class="delo"><p class="delo1">ДЕЛО:</p> {{ name==''?'....................':name }} </h1>
-  <input type="text" v-model="name"> <br>
-  <button v-if="name==''" disabled>Введи дело</button>
+  <input class="inp" type="text" v-model="name"> <br>
+  <button class="btn" v-if="name==''" disabled>Введи дело</button>
   <button class="btn1" v-else @click="$event => sayHello()">ДОБАВИТЬ В СПИСОК</button>
   <h3 class="text5">ВВЕДЕННЫЕ В СПИСОК ДЕЛА</h3>
   <ol class="text6">
@@ -55,6 +55,14 @@
   text-align: center;
   padding-bottom: 30px;
   font-size: 30px;
+}
+.inp{
+  display: block;
+  margin:0 auto;
+}
+.btn{
+  display: block;
+  margin:0 auto;
 }
 .btn1{
   display: block;
